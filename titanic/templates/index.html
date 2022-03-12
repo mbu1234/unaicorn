@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Titanic Predictor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <h2>Titanic Machine Learning model</h2>
+    <p>Enter the details of a made up person on the titanic voyage</p>
+    <p>We will output a prediction as to whether this person is likely to have survived or not</p>
+    <form class="main.css" action="{% url 'result' %}">
+      {% csrf_token %}
+      <p>Pclass</p>
+      <input type="text" name="pclass" value="">
+      <p>Sex</p>
+      <input type="text" name="sex" value="">
+      <p>Age</p>
+      <input type="text" name="age" value="">
+      <p>Sibsp</p>
+      <input type="text" name="sibsp" value="">
+      <p>Parents/Children</p>
+      <input type="text" name="parch" value="">
+      <p>Fare</p>
+      <input type="text" name="fare" value="">
+      <p>Embarked</p>
+      <input type="text" name="embarked" value="">
+      <p>Title</p>
+      <input type="text" name="title" value="">
+
+      <input type="submit" name="" value="Submit your values to the model">
+    </form>
+
+
+  <script type="text/javascript" src="{% static 'main.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Results Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+  </head>
+  <body>
+    <h1>Results Page</h1>
+    <p>Here is the result : .....</p>
+    <p> <b>{{ prediction }} </b></p>
+    <a href="{% url 'home' %}">Click to go home</a>
+  </body>
+</html>
